@@ -300,10 +300,7 @@ const slideData = [
       rightColumn: {
         flex: 1,        
         visual: {
-          paragraphs: [
-            
-          ],
-          
+                
           height: "350px",
           // placeholder: "[Product Photos: Varsity Jacket, Sportswear Details]"
          imageSrc: ProductImage
