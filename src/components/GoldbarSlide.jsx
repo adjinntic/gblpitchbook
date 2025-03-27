@@ -183,7 +183,7 @@ const GoldbarSlide = ({ data, isActive, totalSlides }) => {
     </div>
   </Column>
   <Column style={{ flex: content.rightColumn?.flex || 1 }}>
-    <div style={{ maxHeight: 'calc(100vh - 200px)', overflowY: 'auto' }}> {/* Added maxHeight and overflowY */}
+    <div style={{ maxHeight: 'calc(100vh - 300px)', overflowY: 'visible' }}> {/* Added maxHeight and overflowY */}
       {renderStandardColumnContent(content.rightColumn)}
     </div>
   </Column>
