@@ -434,7 +434,16 @@ const BaseColumn = styled.div`
 
 // --- Standard Layout Components ---
 // Standard column inherits base
-const Column = styled(BaseColumn)``;
+const Column = styled(BaseColumn)`
+  overflow-y: auto; 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+
+  @media (max-width: 900px) {
+    min-width: 100%;
+  }`;
 
 // Columns for overlap layout inherit base
 const ColumnOverlapLeft = styled(BaseColumn)`
