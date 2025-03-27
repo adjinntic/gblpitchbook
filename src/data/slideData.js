@@ -299,10 +299,9 @@ const slideData = [
       },
       rightColumn: {
         flex: 1,        
-        visual: {
-                
+        visual: {      
           height: "350px",
-         imageSrc: ProductImage
+          imageSrc: ProductImage
         }
       }
     }
