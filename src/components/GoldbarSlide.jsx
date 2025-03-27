@@ -154,36 +154,51 @@ const GoldbarSlide = ({ data, isActive, totalSlides }) => {
             {content?.bottomVisual && <VisualPlaceholder visualData={content.bottomVisual} />}
           </>
         );
-      default:
-        return (
-          <>
-            {title && <Title>{title}</Title>}
-            {stat && <StatNumber>{stat}</StatNumber>}
-            {statDescription && <StatDescription dangerouslySetInnerHTML={{ __html: statDescription }} />}
-            {introText && <IntroText dangerouslySetInnerHTML={{ __html: introText }} />}
-            {content?.fullWidth ? (
-              <FullWidthSection>
-                {content.fullWidth.visual && <VisualPlaceholder visualData={content.fullWidth.visual} />}
-                {content.fullWidth.highlightBoxes?.map((box, index) => (
-                  <HighlightBox key={`hb-${index}`} boxData={box} />
-                ))}
-              </FullWidthSection>
-            ) : content ? (
-              <TwoColumnLayout>
-                <Column style={{ flex: content.leftColumn?.flex || 1 }}>
-                  {renderStandardColumnContent(content.leftColumn)}
-                </Column>
-                <Column style={{ flex: content.rightColumn?.flex || 1 }}>
-                  {renderStandardColumnContent(content.rightColumn)}
-                </Column>
-              </TwoColumnLayout>
-            ) : null}
-            {content?.bottomText && <BottomText dangerouslySetInnerHTML={{ __html: content.bottomText }} />}
-            {content?.bottomVisual && <VisualPlaceholder visualData={content.bottomVisual} />}
-          </>
-        );
-    }
-  };
+        default:
+          return (
+            <>
+              {title && <Title>{title}</Title>}
+              {stat && <StatNumber>{stat}</StatNumber>}
+              {statDescription && (
+                <StatDescription dangerouslySetInnerHTML={{ __html: statDescription }} />
+              )}
+              {introText && (
+                <IntroText dangerouslySetInnerHTML={{ __html: introText }} />
+              )}
+              {content?.fullWidth ? (
+                <FullWidthSection>
+                  {content.fullWidth.visual && (
+                    <VisualPlaceholder visualData={content.fullWidth.visual} />
+                  )}
+                  {content.fullWidth.highlightBoxes?.map((box, index) => (
+                    <HighlightBox key={`hb-${index}`} boxData={box} />
+                  ))}
+                </FullWidthSection>
+              ) : content ? (
+                <TwoColumnLayout>
+  <Column style={{ flex: content.leftColumn?.flex || 1 }}>
+    <div style={{ maxHeight: 'calc(100vh - 200px)', overflowY: 'auto' }}> {/* Added maxHeight and overflowY */}
+      {renderStandardColumnContent(content.leftColumn)}
+    </div>
+  </Column>
+  <Column style={{ flex: content.rightColumn?.flex || 1 }}>
+    <div style={{ maxHeight: 'calc(100vh - 200px)', overflowY: 'auto' }}> {/* Added maxHeight and overflowY */}
+      {renderStandardColumnContent(content.rightColumn)}
+    </div>
+  </Column>
+</TwoColumnLayout>
+
+              ) : null}
+              {content?.bottomText && (
+                <BottomText dangerouslySetInnerHTML={{ __html: content.bottomText }} />
+              )}
+              {content?.bottomVisual && (
+                <VisualPlaceholder visualData={content.bottomVisual} />
+              )}
+            </>
+          );
+      }
+    };
 
   return (
     <SlideContainer id={id} className={isVisible ? 'active' : ''} isVisible={isVisible}>

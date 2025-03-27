@@ -300,13 +300,13 @@ const slideData = [
       rightColumn: {
         flex: 1,
         paragraphs: [
-          "<strong>Retail Price Point:</strong> $250 - $300+ (Std.), significantly higher for 1-of-1s."
+          
         ],
-        visual: {
-          height: "350px",
+        //: {
+         // height: "350px",
           // placeholder: "[Product Photos: Varsity Jacket, Sportswear Details]"
-          imageSrc: ProductImage
-        }
+         //imageSrc: ProductImage
+        //}
       }
     }
   },
@@ -348,10 +348,10 @@ const slideData = [
             ]
           }
         ],
-        visual: {
-          height: "250px",
-          placeholder: "[Pie Chart: Revenue Breakdown]"
-        }
+        //visual: {
+          //height: "250px",
+          //placeholder: "[Pie Chart: Revenue Breakdown]"
+        //}
       }
     }
   },
@@ -385,10 +385,10 @@ const slideData = [
           "Potential: $10K → $30K → $60K+ Monthly Recurring Revenue",
           "This program fosters loyalty, provides valuable customer data, and helps manage demand for drops."
         ],
-        visual: {
-          height: "200px",
-          placeholder: "[Mockup of Metal Membership Card]"
-        }
+        //visual: {
+          //height: "200px",
+          //placeholder: "[Mockup of Metal Membership Card]"
+        //}
       }
     }
   },
@@ -581,9 +581,9 @@ const slideData = [
             text: "Positioned for rapid growth (<strong>CAGR >170%</strong>) driven by market expansion, collaborations, limited drops, and enhanced marketing.<br/>Strong <strong>profit margin of 55%+</strong> ensures sustainability and reinvestment potential, while the scarcity model maintains demand and <strong>premium pricing power.</strong>"
           }
         ],
-         visual: { // Added visual for projections
-          height: "200px",
-          placeholder: "[Bar Chart: Revenue Projections Y1-Y5]"
+         //visual: { // Added visual for projections
+          //height: "200px",
+          //placeholder: "[Bar Chart: Revenue Projections Y1-Y5]"
         }
       },
       rightColumn: {
@@ -599,11 +599,11 @@ const slideData = [
             ]
           }
         ],
-        visual: {
-          height: "200px",
-          placeholder: "[Pie Chart: Cost Structure Breakdown]"
-        }
-      }
+        //visual: {
+          //height: "200px",
+          //placeholder: "[Pie Chart: Cost Structure Breakdown]"
+        //}
+      //}
     }
   },
   {
@@ -649,10 +649,10 @@ const slideData = [
         paragraphs: [
           "Strategic allocation designed to drive brand visibility, operational efficiency, and achieve the targeted <strong>3x ROI within two years.</strong>"
         ],
-         visual: { // Added visual for allocation
-          height: "200px",
-          placeholder: "[Pie Chart: Investment Allocation]"
-        }
+         //visual: { // Added visual for allocation
+          //height: "200px",
+          //placeholder: "[Pie Chart: Investment Allocation]"
+        //}
       }
     }
   },
