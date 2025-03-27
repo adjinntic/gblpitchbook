@@ -889,6 +889,8 @@ const slideData = [
               "Product Showcase & Q&A with Q",
               "Discuss Partnership Structure"
             ]
+            text: "<strong>Kyle Q</strong><br/>Founder & Creative Director<br/><br/><strong>Address:</strong> 3455 Peachtree Road NE Suite 500 Atlanta, Georgia 30326<br/><strong>Phone:</strong> (678) 909-1632<br/><strong>Email:</strong> info@goldbarlimited.com<br/><strong>Website:</strong> goldbarlimited.com"
+
           }
         ]
       },
