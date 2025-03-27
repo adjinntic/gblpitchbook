@@ -302,7 +302,6 @@ const slideData = [
         visual: {
                 
           height: "350px",
-          // placeholder: "[Product Photos: Varsity Jacket, Sportswear Details]"
          imageSrc: ProductImage
         }
       }
