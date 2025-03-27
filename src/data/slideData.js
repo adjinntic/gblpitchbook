@@ -872,7 +872,7 @@ const slideData = [
     id: "closing",
     slideNumber: "24",
     category: "CLOSING",
-    layoutType: 'TYPE_DEFAULT', // Ensure default layout
+    layoutType: 'TYPE_TWO_COLUMN_OVERLAP', // Ensure default layout
     title: "Investment Summary, CTA & Contact",
     // introText removed as per plan
     backgroundEffects: { glow1: false, glow2: true },
@@ -888,8 +888,7 @@ const slideData = [
               "Detailed Financial Review",
               "Product Showcase & Q&A with Q",
               "Discuss Partnership Structure"
-            ],
-            text: "<strong>Kyle Q</strong><br/>Founder & Creative Director<br/><br/><strong>Address:</strong> 3455 Peachtree Road NE Suite 500 Atlanta, Georgia 30326<br/><strong>Phone:</strong> (678) 909-1632<br/><strong>Email:</strong> info@goldbarlimited.com<br/><strong>Website:</strong> goldbarlimited.com"
+            ]
 
           }
         ]
