@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import HighlightBox from './HighlightBox.jsx';
 import VisualPlaceholder from './VisualPlaceholder.jsx';
+import Header from './Header';
 
 /**
  * Helper function to render standard column content (paragraphs, boxes, sections, visuals)
@@ -199,13 +200,21 @@ const GoldbarSlide = ({ data, isActive, totalSlides }) => {
           );
       }
     };
+  const headerRef = useRef(null);
 
+    useEffect(() => {
+      const headerHeight = headerRef.current?.offsetHeight || 0;
+    const slideContent = document.querySelector(`#${data.id} .sc-jRLeyu`);
+    if (slideContent) {
+      slideContent.style.paddingTop = `${headerHeight}px`;
+    }
+  }, [data.id]);
   return (
-    <SlideContainer id={id} className={isVisible ? 'active' : ''} isVisible={isVisible}>
-      {backgroundEffects.glow1 && <GlowElement className="glow-1" />}
-      {backgroundEffects.glow2 && <GlowElement className="glow-2" />}
-      <SlideIndicator>{slideNumber} / {totalSlides}</SlideIndicator>
-      <SlideContent>{renderSlideLayout()}</SlideContent>
+    <SlideContainer id={data.id} className={isVisible ? 'active' : ''} isVisible={isVisible}>
+      <Header ref={headerRef} /> {/* Render Header above SlideContent */}
+      <SlideContent>
+        {renderSlideLayout()}
+      </SlideContent>
     </SlideContainer>
   );
 };
