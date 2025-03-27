@@ -904,8 +904,8 @@ const slideData = [
         // paragraphs removed
         visual: { // Added visual placeholder
           height: "250px",
-          imageSrc: ClosingVisualImage,
-          placeholder: "[Goldbar Brand Image / KC Visual]"
+          imageSrc: ClosingVisualImage
+          //placeholder: "[Goldbar Brand Image / KC Visual]"
         }
       }
     }
